@@ -1,0 +1,152 @@
+.container {
+  /* box-sizing: border-box; — Faz com que a largura e altura do elemento incluam o padding e a borda. */
+  box-sizing: border-box;
+  /* max-width: 1200px; — Define a largura máxima do container. */
+  max-width: 1200px;
+  /* padding-left: 20px; — Adiciona 20 pixels de espaçamento interno na esquerda. */
+  padding-left: 20px;
+  /* padding-right: 20px; — Adiciona 20 pixels de espaçamento interno na direita. */
+  padding-right: 20px;
+  /* margin-left: auto; — Centraliza o container na horizontal. */
+  margin-left: auto;
+  /* margin-right: auto; — Centraliza o container na horizontal. */
+  margin-right: auto;
+}
+
+.botao {
+  /* display: inline-block; — Permite que o elemento seja um bloco, mas fique na linha. */
+  display: inline-block;
+  /* padding: 16px 32px; — Adiciona 16px de padding em cima/baixo e 32px nas laterais. */
+  padding: 16px 32px;
+  /* background: linear-gradient(#ffbb00, #f2a50c); — Cria um gradiente de cor amarela para o fundo. */
+  background: linear-gradient(#ffbb00, #f2a50c);
+  /* border-radius: 4px; — Arredonda as bordas do botão. */
+  border-radius: 4px;
+  /* box-shadow: 0 1px 2px rgb(0, 0, 0.1); — Adiciona uma sombra sutil ao botão. */
+  box-shadow: 0 1px 2px rgb(0, 0, 0.1);
+  /* text-transform: uppercase; — Transforma o texto em letras maiúsculas. */
+  text-transform: uppercase;
+  /* color: var(--cor-p5); — Define a cor do texto usando uma variável CSS. */
+  color: var(--cor-p5);
+  /* font: 600 1.125rem/1.35 "Poppins", sans-serif; — Define a fonte, peso, tamanho e altura da linha. */
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+  /* max-width: max-content; — Garante que a largura do botão se ajuste ao conteúdo. */
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  /* background: linear-gradient(#ffb60d, #e59317); — Altera o gradiente do botão ao passar o mouse. */
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+.botao.secundario {
+  /* background: var(--cor-10); — Define o fundo do botão secundário usando uma variável. */
+  background: var(--cor-10);
+  /* color: var(--cor-2); — Define a cor do texto do botão secundário. */
+  color: var(--cor-2);
+}
+
+.botao.secundario:hover {
+  /* background: var(--cor-9); — Altera o fundo do botão secundário ao passar o mouse. */
+  background: var(--cor-9);
+}
+
+.botao.seta {
+  /* display: flex; — Habilita o uso de flexbox para alinhamento. */
+  display: flex;
+  /* align-items: center; — Alinha os itens (texto e seta) verticalmente ao centro. */
+  align-items: center;
+}
+
+.botao.seta::after {
+  /* content: ""; — Cria um pseudo-elemento vazio. */
+  content: "";
+  /* display: inline-block; — Faz com que o pseudo-elemento seja um bloco, mas fique na linha. */
+  display: inline-block;
+  /* width: 18px; — Define a largura da seta. */
+  width: 18px;
+  /* height: 10px; — Define a altura da seta. */
+  height: 10px;
+  /* margin-left: 12px; — Adiciona um espaçamento de 12px à esquerda da seta. */
+  margin-left: 12px;
+  /* background: url("../../img/icones/seta.svg"); — Define a imagem da seta como fundo. */
+  background: url("../../img/icones/seta.svg");
+  /* transition: transform 0.2s; — Prepara uma transição suave para a propriedade 'transform'. */
+  transition: transform 0.2s;
+}
+
+.botao.seta:hover:after {
+  /* transform: translateX(4px); — Move a seta 4px para a direita no hover. */
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .botao {
+    /* padding: 12px 16px; — Reduz o padding para telas menores. */
+    padding: 12px 16px;
+    /* font-size: 1rem; — Reduz o tamanho da fonte para telas menores. */
+    font-size: 1rem;
+  }
+}
+
+.link {
+  /* display: inline-block; — Permite que o link tenha propriedades de bloco, mas fique na linha. */
+  display: inline-block;
+  /* color: var(--cor-p1); — Define a cor do texto do link. */
+  color: var(--cor-p1);
+  /* font: 500 1.5rem/1.5 "Poppins", sans-serif; — Define a fonte, peso, tamanho e altura da linha. */
+  font: 500 1.5rem/1.5 "Poppins", sans-serif;
+  /* text-transform: uppercase; — Transforma o texto em letras maiúsculas. */
+  text-transform: uppercase;
+}
+
+.link::after {
+  /* content: ""; — Cria um pseudo-elemento vazio. */
+  content: "";
+  /* display: block; — Transforma a linha em um bloco, para ocupar toda a largura. */
+  display: block;
+  /* width: 100%; — Define a largura da linha em 100%. */
+  width: 100%;
+  /* height: 4px; — Define a altura da linha. */
+  height: 4px;
+  /* background-color: currentColor; — Faz a cor da linha seguir a cor do texto. */
+  background-color: currentColor;
+}
+
+.link:hover {
+  /* color: var(--cor-0); — Altera a cor do link ao passar o mouse. */
+  color: var(--cor-0);
+}
+
+.titulo-bg {
+  /* padding-top: 60px; — Adiciona 60px de padding no topo. */
+  padding-top: 60px;
+  /* padding-bottom: 60px; — Adiciona 60px de padding na parte inferior. */
+  padding-bottom: 60px;
+  /* background-color: var(--cor-11); — Define a cor de fundo usando uma variável. */
+  background-color: var(--cor-11);
+}
+
+.titulo p {
+  /* margin-bottom: 4px; — Adiciona uma pequena margem inferior ao parágrafo do título. */
+  margin-bottom: 4px;
+}
+
+@media (max-width: 800px) {
+  .titulo-bg {
+    /* padding-top: 40px; — Reduz o padding superior para telas menores. */
+    padding-top: 40px;
+    /* padding-bottom: 40px; — Reduz o padding inferior para telas menores. */
+    padding-bottom: 40px;
+  }
+  .titulo p {
+    /* font-size: 1rem; — Reduz o tamanho da fonte do parágrafo. */
+    font-size: 1rem;
+    /* text-transform: lowercase; — Transforma o texto para minúsculas. */
+    text-transform: lowercase;
+    /* font-weight: 400; — Reduz o peso da fonte para um valor mais leve. */
+    font-weight: 400;
+  }
+}
